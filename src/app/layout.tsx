@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
-    "Next.js",
-    "React",
-    "Tailwind CSS",
-    "Server Components",
-    "Radix UI",
-    "Shadcnui",
-    "Javascript",
+    "Rdrudra99",
+    "Rudra Narayan Boitei",
+    "rdrudra99",
+    "Rudra",
+    "rdrudra99.site",
+    "rdrudra99",
+    "Rd Rudra99",
     "Blog",
   ],
   authors: [
@@ -41,17 +41,9 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/og`],
-    creator: "@Rdrudra99",
-  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
-    apple: "apple-touch-icon.png",
   },
 };
 
@@ -61,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">spaceGrotesk
+    <html lang="en">
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

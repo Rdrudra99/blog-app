@@ -46,13 +46,7 @@ export function generateMetadata({
       publishedTime,
       url: `${baseUrl}/blog/${post?.metadata.category}/${post?.slug}}`,
       images: [{ url: ogImage }],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [ogImage],
-    },
+    }
   };
 }
 
