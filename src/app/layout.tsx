@@ -25,11 +25,11 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Coding Jitsu",
-      url: "https://github.com/codingjitsu",
+      name: "Rdrudra99",
+      url: "https://github.com/Rdrudra99",
     },
   ],
-  creator: "coding jitsu",
+  creator: "Rudra Narayan Boitei",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og`],
-    creator: "@codingJitsu",
+    creator: "@Rdrudra99",
   },
   icons: {
     icon: "/favicon.ico",
