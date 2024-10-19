@@ -5,13 +5,13 @@ import {
   ArrowRight,
   Icon as LucidIcon,
   LucideProps,
-  FlameKindling
+  Zap
 } from "lucide-react";
 
 export type Icon = typeof LucidIcon;
 
 export const Icons = {
-  logo: FlameKindling,
+  logo: Zap,
   rss: Rss,
   arrowRight: ArrowRight,
   twitter: Twitter,
