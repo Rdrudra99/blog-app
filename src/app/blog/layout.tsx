@@ -4,7 +4,7 @@ import { MainNav } from "@/components/main-nav";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div className="bg-gray-100 dark:bg-gray-800">
+      <div className="">
         <Container>
           <MainNav />
         </Container>

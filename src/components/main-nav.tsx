@@ -22,14 +22,14 @@ export function MainNav({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "flex flex-col items-start justify-start md:flex-row md:items-center md:justify-between pt-10 z-50",
+        "flex  items-start justify-between md:flex-row md:items-center md:justify-between pt-10 z-50",
         className
       )}
     >
       <Link href={"/"}>
-        <div className="flex items-center justify-between w-32">
+        <div className="flex items-center justify-between">
           <Icons.logo className="h-6 w-6" />
-          <p>Rd Rudra99</p>
+          <p className="hidden md:block">Rd Rudra99</p>
         </div>
       </Link>
       <NavigationMenu>

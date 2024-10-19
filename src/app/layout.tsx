@@ -4,7 +4,10 @@ import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/footer";
 import { siteConfig } from "@/config/site";
+import { Space_Grotesk } from 'next/font/google'
 
+
+const spaceGrotesk = Space_Grotesk({subsets: ["latin"], weight: ["300", "400", "500", "600",  "700"]})
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -59,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={spaceGrotesk.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -67,7 +70,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="flex-1">{children}</main>
-          <Footer />
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>

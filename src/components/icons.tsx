@@ -1,16 +1,17 @@
 import {
   Rss,
   Twitter,
-  Command,
+  SignatureIcon,
   ArrowRight,
   Icon as LucidIcon,
   LucideProps,
+  FlameKindling
 } from "lucide-react";
 
 export type Icon = typeof LucidIcon;
 
 export const Icons = {
-  logo: Command,
+  logo: FlameKindling,
   rss: Rss,
   arrowRight: ArrowRight,
   twitter: Twitter,

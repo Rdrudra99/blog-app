@@ -12,7 +12,7 @@ export default function Footer() {
   const initialState = { message: "", errors: {} };
   const [state, dispatch] = useFormState(createSubscriber, initialState);
   return (
-    <footer className="bg-gray-100 py-8 dark:bg-gray-800 mt-10">
+    <footer className="mt-10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="space-y-4">
@@ -111,7 +111,7 @@ export default function Footer() {
                   defaultValue=""
                   aria-describedby="email-error"
                 />
-                <Button>Subscribe</Button>
+                <Button className="rounded-sm">Subscribe</Button>
               </div>
               <div
                 id="email-error"
