@@ -61,8 +61,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={spaceGrotesk.className}>
+    <html lang="en">spaceGrotesk
+      <body className={inter.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
