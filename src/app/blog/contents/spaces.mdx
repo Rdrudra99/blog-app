@@ -1,0 +1,138 @@
+---
+title: "Top JavaScript Interview Problem-Solving Questions on React and Objects"
+publishedAt: "2024-10-19"
+summary: "A comprehensive list of the most frequently asked JavaScript problem-solving questions related to React and Objects, along with their solutions."
+category: "javascript"
+---
+
+In this article, we will explore some of the most common problem-solving questions asked in JavaScript interviews, especially those focusing on React and object manipulation. We will also provide solutions to these questions, giving you a practical approach to solving them during an interview.
+
+## 1. React: How to conditionally render a component in React?
+
+### Problem:
+You need to conditionally render a component in React based on a specific condition.
+
+### Solution:
+You can use JavaScript's ternary operator or logical `&&` operator to conditionally render a component.
+
+```jsx
+const MyComponent = ({ isLoggedIn }) => {
+  return (
+    <div>
+      {isLoggedIn ? <p>Welcome back, user!</p> : <p>Please log in.</p>}
+    </div>
+  );
+};
+```
+
+In this example, the component renders different messages depending on the value of `isLoggedIn`.
+
+---
+
+## 2. React: How to pass data between components in React?
+
+### Problem:
+How do you pass data from a parent component to a child component?
+
+### Solution:
+To pass data between components, use props.
+
+```jsx
+const ParentComponent = () => {
+  const message = "Hello from the parent!";
+  return <ChildComponent message={message} />;
+};
+
+const ChildComponent = ({ message }) => {
+  return <p>{message}</p>;
+};
+```
+
+In this example, the parent component passes the `message` variable as a prop to the child component, which can then use it.
+
+---
+
+## 3. JavaScript: How to deep clone an object?
+
+### Problem:
+You are given a JavaScript object, and you need to create a deep copy of it without maintaining references to the original object.
+
+### Solution:
+You can use the structured cloning algorithm with `structuredClone` or manually deep clone the object using recursion.
+
+```js
+// Using structuredClone
+const original = { a: 1, b: { c: 2 } };
+const clone = structuredClone(original);
+
+// Manual deep cloning
+function deepClone(obj) {
+  if (obj === null || typeof obj !== "object") {
+    return obj;
+  }
+
+  if (Array.isArray(obj)) {
+    return obj.map(deepClone);
+  }
+
+  const clonedObj = {};
+  for (const key in obj) {
+    clonedObj[key] = deepClone(obj[key]);
+  }
+
+  return clonedObj;
+}
+```
+
+The first method, `structuredClone`, is the most modern and recommended way. The second is a manual implementation that handles both objects and arrays.
+
+---
+
+## 4. JavaScript: How to merge two objects in JavaScript?
+
+### Problem:
+You need to merge two JavaScript objects into one.
+
+### Solution:
+Use the spread operator (`...`) or `Object.assign()`.
+
+```js
+const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 3, c: 4 };
+
+// Using spread operator
+const merged = { ...obj1, ...obj2 };
+
+// Using Object.assign()
+const mergedAssign = Object.assign({}, obj1, obj2);
+```
+
+Both methods will create a new object where properties from `obj2` overwrite properties in `obj1` with the same key.
+
+---
+
+## 5. JavaScript: How to find duplicate elements in an array?
+
+### Problem:
+You have an array of numbers, and you need to find the duplicate elements in it.
+
+### Solution:
+You can use a `Set` to keep track of seen elements and filter out duplicates.
+
+```js
+const numbers = [1, 2, 3, 4, 3, 5, 6, 2];
+const duplicates = numbers.filter((item, index) => numbers.indexOf(item) !== index);
+
+console.log(duplicates); // Output: [3, 2]
+```
+
+This code finds all the duplicates in the array by checking the index of each element and comparing it to its first occurrence.
+
+---
+
+## Conclusion
+
+These problems and solutions cover essential JavaScript and React topics commonly encountered in technical interviews. Mastering these will not only prepare you for interviews but also help you build more robust applications in your day-to-day development work.
+```
+
+You can save this content into a `.mdx` file for further use. Let me know if you'd like any adjustments!
