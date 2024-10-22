@@ -120,4 +120,106 @@ Got it! Here are some of the most frequently asked HTML questions that often com
       </table>
       ```
 
-These questions and answers focus on fundamental HTML concepts that are essential for any web development role, especially when working with React.
+Sure! Here are 10 more commonly asked HTML-related interview questions that might come up in React.js interviews, along with their answers and examples:
+
+11. **What is the purpose of the `<form>` element in HTML?**
+    - **Answer:** The `<form>` element is used to collect user input. It wraps input elements and controls that allow users to submit data to a server.
+    - **Example:**
+      ```html
+      <form action="/submit" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <button type="submit">Submit</button>
+      </form>
+      ```
+
+12. **How do you create an HTML comment?**
+    - **Answer:** HTML comments are created using the `<!-- comment -->` syntax. They are not displayed in the browser.
+    - **Example:**
+      ```html
+      <!-- This is a comment -->
+      <p>This will be visible.</p>
+      ```
+
+13. **What is the difference between the `<strong>` and `<b>` tags?**
+    - **Answer:** The `<strong>` tag indicates that the text is of strong importance and typically renders as bold, while `<b>` simply styles the text as bold without any semantic meaning.
+    - **Example:**
+      ```html
+      <strong>Important!</strong> <b>Bold text</b>
+      ```
+
+14. **How can you make an image a link in HTML?**
+    - **Answer:** You can wrap the `<img>` tag inside an `<a>` tag to make it a clickable link.
+    - **Example:**
+      ```html
+      <a href="https://example.com">
+        <img src="logo.png" alt="Logo" />
+      </a>
+      ```
+
+15. **What are `<header>`, `<footer>`, and `<nav>` elements used for?**
+    - **Answer:** The `<header>` element typically contains introductory content or navigational links, the `<footer>` element contains footer information about the document (like copyright), and the `<nav>` element is used for navigation links.
+    - **Example:**
+      ```html
+      <header>
+        <h1>Website Title</h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+          </ul>
+        </nav>
+      </header>
+      <footer>
+        <p>© 2024 My Website</p>
+      </footer>
+      ```
+
+16. **What is an anchor tag, and how do you create a hyperlink?**
+    - **Answer:** The `<a>` (anchor) tag is used to create hyperlinks. You can set the `href` attribute to the URL you want to link to.
+    - **Example:**
+      ```html
+      <a href="https://www.example.com">Visit Example</a>
+      ```
+
+17. **What is the purpose of the `target` attribute in anchor tags?**
+    - **Answer:** The `target` attribute specifies where to open the linked document. Common values include `_blank` (new tab), `_self` (same frame), `_parent`, and `_top`.
+    - **Example:**
+      ```html
+      <a href="https://www.example.com" target="_blank">Open in new tab</a>
+      ```
+
+18. **How do you create a checkbox and a radio button in HTML?**
+    - **Answer:** A checkbox is created using the `<input type="checkbox">` tag, and a radio button is created using `<input type="radio">`. Radio buttons group together, allowing only one to be selected.
+    - **Example:**
+      ```html
+      <label>
+        <input type="checkbox" name="subscribe" /> Subscribe to newsletter
+      </label>
+      <label>
+        <input type="radio" name="gender" value="male" /> Male
+      </label>
+      <label>
+        <input type="radio" name="gender" value="female" /> Female
+      </label>
+      ```
+
+19. **What are `<meta>` tags, and what are some common uses?**
+    - **Answer:** `<meta>` tags provide metadata about the HTML document, such as character set, keywords, author, and viewport settings for responsive design.
+    - **Example:**
+      ```html
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="A description of my webpage." />
+      </head>
+      ```
+
+20. **How do you create an iframe, and when would you use it?**
+    - **Answer:** An `<iframe>` (inline frame) is used to embed another document within the current HTML document. It’s often used for embedding videos, maps, or other external content.
+    - **Example:**
+      ```html
+      <iframe src="https://www.example.com" width="600" height="400" title="Example Site"></iframe>
+      ```
+
+These additional questions and answers provide a broader understanding of HTML concepts relevant to web development, particularly in the context of using React.
