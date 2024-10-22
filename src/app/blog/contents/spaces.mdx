@@ -1,138 +1,123 @@
 ---
-title: "Top JavaScript Interview Problem-Solving Questions on React and Objects"
+title: "Top HTML Interview Questions asked in React js interview"
 publishedAt: "2024-10-19"
 summary: "A comprehensive list of the most frequently asked JavaScript problem-solving questions related to React and Objects, along with their solutions."
-category: "javascript"
+category: "html"
 ---
+Got it! Here are some of the most frequently asked HTML questions that often come up in React.js interviews, focusing on basic HTML knowledge that is particularly relevant for React developers:
 
-In this article, we will explore some of the most common problem-solving questions asked in JavaScript interviews, especially those focusing on React and object manipulation. We will also provide solutions to these questions, giving you a practical approach to solving them during an interview.
+1. **What are HTML attributes? Give examples of common attributes.**
+   - **Answer:** HTML attributes provide additional information about HTML elements. Common attributes include `id`, `class`, `src`, `href`, and `alt`.
+   - **Example:** 
+     ```html
+     <img src="image.jpg" alt="Description" class="image-class" />
+     ```
 
-## 1. React: How to conditionally render a component in React?
+2. **What is the purpose of the `<head>` section in an HTML document?**
+   - **Answer:** The `<head>` section contains meta-information about the document, such as the title, links to stylesheets, scripts, and metadata.
+   - **Example:**
+     ```html
+     <head>
+       <title>My Page Title</title>
+       <link rel="stylesheet" href="styles.css" />
+     </head>
+     ```
 
-### Problem:
-You need to conditionally render a component in React based on a specific condition.
+3. **What is the difference between the `<link>` and `<script>` tags?**
+   - **Answer:** The `<link>` tag is used to link external resources like stylesheets, while the `<script>` tag is used to include JavaScript files or inline scripts.
+   - **Example:**
+     ```html
+     <link rel="stylesheet" href="styles.css" />
+     <script src="script.js"></script>
+     ```
 
-### Solution:
-You can use JavaScript's ternary operator or logical `&&` operator to conditionally render a component.
+4. **How do you create a list in HTML? What are the differences between ordered and unordered lists?**
+   - **Answer:** Lists are created using `<ul>` for unordered lists and `<ol>` for ordered lists. Unordered lists use bullet points, while ordered lists use numbers.
+   - **Example:**
+     ```html
+     <ul>
+       <li>Item 1</li>
+       <li>Item 2</li>
+     </ul>
+     <ol>
+       <li>First Item</li>
+       <li>Second Item</li>
+     </ol>
+     ```
 
-```jsx
-const MyComponent = ({ isLoggedIn }) => {
-  return (
-    <div>
-      {isLoggedIn ? <p>Welcome back, user!</p> : <p>Please log in.</p>}
-    </div>
-  );
-};
-```
+5. **What is the purpose of the `<title>` tag?**
+   - **Answer:** The `<title>` tag sets the title of the HTML document, which appears in the browser tab and is used by search engines for indexing.
+   - **Example:**
+     ```html
+     <head>
+       <title>My Webpage</title>
+     </head>
+     ```
 
-In this example, the component renders different messages depending on the value of `isLoggedIn`.
+6. **What is the difference between the `GET` and `POST` methods in HTML forms?**
+   - **Answer:** The `GET` method appends form data to the URL and is used for retrieving data, while the `POST` method sends data in the request body and is used for submitting data securely.
+   - **Example:**
+     ```html
+     <form action="/submit" method="GET">
+       <input type="text" name="query" />
+       <button type="submit">Search</button>
+     </form>
+     ```
 
----
+7. **How can you include a stylesheet in your HTML document?**
+   - **Answer:** You can include a stylesheet using the `<link>` tag in the `<head>` section of your document.
+   - **Example:**
+     ```html
+     <head>
+       <link rel="stylesheet" href="styles.css" />
+     </head>
+     ```
 
-## 2. React: How to pass data between components in React?
+8. **What are the semantic elements in HTML5? Name a few.**
+   - **Answer:** Semantic elements clearly describe their meaning in a way that both browsers and developers can understand. Examples include `<header>`, `<footer>`, `<article>`, `<section>`, and `<nav>`.
+   - **Example:**
+     ```html
+     <header>
+       <h1>Site Title</h1>
+     </header>
+     <nav>
+       <ul>
+         <li><a href="#home">Home</a></li>
+         <li><a href="#about">About</a></li>
+       </ul>
+     </nav>
+     ```
 
-### Problem:
-How do you pass data from a parent component to a child component?
+9. **What is the difference between inline and block elements? Provide examples.**
+   - **Answer:** Block elements occupy the full width and start on a new line (e.g., `<div>`, `<p>`), while inline elements occupy only as much width as necessary and do not start on a new line (e.g., `<span>`, `<a>`).
+   - **Example:**
+     ```html
+     <div>This is a block element.</div>
+     <span>This is an inline element.</span>
+     ```
 
-### Solution:
-To pass data between components, use props.
+10. **How do you create a table in HTML?**
+    - **Answer:** A table is created using the `<table>` tag, along with `<tr>` for rows, `<th>` for header cells, and `<td>` for data cells.
+    - **Example:**
+      ```html
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alice</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Bob</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+      ```
 
-```jsx
-const ParentComponent = () => {
-  const message = "Hello from the parent!";
-  return <ChildComponent message={message} />;
-};
-
-const ChildComponent = ({ message }) => {
-  return <p>{message}</p>;
-};
-```
-
-In this example, the parent component passes the `message` variable as a prop to the child component, which can then use it.
-
----
-
-## 3. JavaScript: How to deep clone an object?
-
-### Problem:
-You are given a JavaScript object, and you need to create a deep copy of it without maintaining references to the original object.
-
-### Solution:
-You can use the structured cloning algorithm with `structuredClone` or manually deep clone the object using recursion.
-
-```js
-// Using structuredClone
-const original = { a: 1, b: { c: 2 } };
-const clone = structuredClone(original);
-
-// Manual deep cloning
-function deepClone(obj) {
-  if (obj === null || typeof obj !== "object") {
-    return obj;
-  }
-
-  if (Array.isArray(obj)) {
-    return obj.map(deepClone);
-  }
-
-  const clonedObj = {};
-  for (const key in obj) {
-    clonedObj[key] = deepClone(obj[key]);
-  }
-
-  return clonedObj;
-}
-```
-
-The first method, `structuredClone`, is the most modern and recommended way. The second is a manual implementation that handles both objects and arrays.
-
----
-
-## 4. JavaScript: How to merge two objects in JavaScript?
-
-### Problem:
-You need to merge two JavaScript objects into one.
-
-### Solution:
-Use the spread operator (`...`) or `Object.assign()`.
-
-```js
-const obj1 = { a: 1, b: 2 };
-const obj2 = { b: 3, c: 4 };
-
-// Using spread operator
-const merged = { ...obj1, ...obj2 };
-
-// Using Object.assign()
-const mergedAssign = Object.assign({}, obj1, obj2);
-```
-
-Both methods will create a new object where properties from `obj2` overwrite properties in `obj1` with the same key.
-
----
-
-## 5. JavaScript: How to find duplicate elements in an array?
-
-### Problem:
-You have an array of numbers, and you need to find the duplicate elements in it.
-
-### Solution:
-You can use a `Set` to keep track of seen elements and filter out duplicates.
-
-```js
-const numbers = [1, 2, 3, 4, 3, 5, 6, 2];
-const duplicates = numbers.filter((item, index) => numbers.indexOf(item) !== index);
-
-console.log(duplicates); // Output: [3, 2]
-```
-
-This code finds all the duplicates in the array by checking the index of each element and comparing it to its first occurrence.
-
----
-
-## Conclusion
-
-These problems and solutions cover essential JavaScript and React topics commonly encountered in technical interviews. Mastering these will not only prepare you for interviews but also help you build more robust applications in your day-to-day development work.
-```
-
-You can save this content into a `.mdx` file for further use. Let me know if you'd like any adjustments!
+These questions and answers focus on fundamental HTML concepts that are essential for any web development role, especially when working with React.
